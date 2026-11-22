@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a080e">
+<title>我的 · 月相札记 lunar Journal</title>
+<meta name="description" content="月相等级、牌记、器物与设置。">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body data-page="profile" class="page-profile">
+<a class="skip-link" href="#main">跳到主要内容</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.2 14.1A8.4 8.4 0 0 1 9.9 3.8 8.5 8.5 0 1 0 20.2 14.1Z" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linejoin="round"/></symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h2l2.1 10.2a1.6 1.6 0 0 0 1.6 1.3h8.1a1.6 1.6 0 0 0 1.6-1.2L20 7H6" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9.5" cy="19" r="1.2" fill="currentColor"/><circle cx="17" cy="19" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4" fill="none" stroke="currentColor" stroke-width="1.35"/><path d="M5 20c.6-3.4 3.4-5.2 7-5.2s6.4 1.8 7 5.2" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/></symbol>
+    <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M4 12h15M14 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-arrow-l" viewBox="0 0 24 24"><path d="M20 12H5M10 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6" fill="none" stroke="currentColor" stroke-width="1.35"/><path d="m15 15 5 5" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.2 5.4 5.8.5-4.4 3.8 1.3 5.7L12 15.4 7.1 18.4l1.3-5.7L4 8.9l5.8-.5L12 3Z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="1" fill="none" stroke="currentColor" stroke-width="1.35"/><path d="M8 10V7a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="1.35"/><circle cx="12" cy="15" r="1" fill="currentColor"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4.5 4.5L19 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 2.5c.5 5 4 8.5 9 9-5 .5-8.5 4-9 9-.5-5-4-8.5-9-9 5-.5 8.5-4 9-9Z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5c3-1.2 5.5-.8 8 1.1v13c-2.5-1.9-5-2.3-8-1.1v-13ZM20 5.5c-3-1.2-5.5-.8-8 1.1v13c2.5-1.9 5-2.3 8-1.1v-13Z" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/></symbol>
+    <symbol id="i-cards" viewBox="0 0 24 24"><rect x="4" y="6" width="11" height="15" fill="none" stroke="currentColor" stroke-width="1.25" transform="rotate(-8 9.5 13.5)"/><rect x="9" y="4" width="11" height="15" fill="none" stroke="currentColor" stroke-width="1.25"/></symbol>
+    <symbol id="i-shop" viewBox="0 0 24 24"><path d="M4 9h16l-1-5H5L4 9Z" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/><path d="M5 9v11h14V9M9 20v-6h6v6" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4V5Z" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/><path d="M8 9h8M8 12h5" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/></symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.25"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M18.4 5.6 17 7M7 17l-1.4 1.4" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13M10 11v5M14 11v5" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16v4Z" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/><path d="m13.5 6.5 4 4" fill="none" stroke="currentColor" stroke-width="1.25"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7 11l5 5 5-5M4 20h16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 16V4M7 8l5-5 5 5M4 20h16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-shuffle" viewBox="0 0 24 24"><path d="M3 7h4l10 10h4M17 13l4 4-4 4M3 17h4l3-3M14 7h7M17 3l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-rotate" viewBox="0 0 24 24"><path d="M20 8a8 8 0 1 0 1 6M20 3v5h-5" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-9.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 7 3.5C19 15.5 12 20 12 20Z" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 6.5 12 6.5 21.5 12 21.5 12 18 17.5 12 17.5 2.5 12 2.5 12Z" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="12" cy="12" r="2.6" fill="none" stroke="currentColor" stroke-width="1.2"/></symbol>
+    <symbol id="i-filter" viewBox="0 0 24 24"><path d="M3 5h18l-7 8v6l-4 2v-8L3 5Z" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3 22 20H2L12 3Z" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/><path d="M12 9v5M12 17h.01" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M12 11v6M12 7h.01" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></symbol>
+    <symbol id="i-coin" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M12 7a5 5 0 1 0 0 10 5 5 0 1 0 0-10Z" fill="none" stroke="currentColor" stroke-width="1" opacity=".55"/><path d="M12 9v6M10 11h4M10 13h4" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M3 6h11v11H3V6ZM14 9h4l3 3v5h-7V9Z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><circle cx="7" cy="19" r="1.5" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="17.5" cy="19" r="1.5" fill="none" stroke="currentColor" stroke-width="1.2"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11Z" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="12" cy="10" r="2.4" fill="none" stroke="currentColor" stroke-width="1.2"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 20 6v6c0 4.4-3.2 7.8-8 9-4.8-1.2-8-4.6-8-9V6l8-3Z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><path d="m8.5 12 2.3 2.3 4.7-5" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="月相札记 首页">
+      <svg class="brand-mark" aria-hidden="true"><use href="#i-moon"/></svg>
+      <span class="brand-text">
+        <span class="brand-cn">月相札记</span>
+        <span class="brand-en">lunar Journal</span>
+      </span>
+    </a>
+
+    <div class="header-actions">
+      <span class="chip-credits" title="月华：记录与回看获得的积分"><svg><use href="#i-coin"/></svg><span data-credits>128</span></span>
+      <a class="icon-btn" href="cart.html" aria-label="购物袋">
+        <svg><use href="#i-cart"/></svg>
+        <span class="cart-count" data-cart-count data-empty="true">0</span>
+      </a>
+      <a class="avatar-btn" href="profile.html" aria-label="我的主页" data-avatar>月</a>
+    </div>
+  </div>
+  <div class="nav-bar">
+    <div class="wrap nav-bar-inner">
+    <nav class="main-nav" aria-label="主导航">
+      <a class="nav-link " href="index.html">首页</a>
+      <a class="nav-link " href="ritual.html">圣所</a>
+      <a class="nav-link " href="draw.html">抽牌</a>
+      <a class="nav-link " href="journal.html">牌记</a>
+      <a class="nav-link " href="cards.html">牌库</a>
+      <a class="nav-link " href="circle.html">共修</a>
+      <a class="nav-link " href="market.html">市集</a>
+      <a class="nav-link is-active" href="profile.html">我的</a>
+      <a class="nav-link " href="about.html">关于</a>
+    </nav>
+    </div>
+  </div>
+</header>
+
+
+
+<main id="main" class="page-main page-profile">
+<section class="profile-shell">
+  <div class="wrap">
+    <div class="profile-head">
+      <div class="profile-avatar" data-avatar>夜</div>
+      <div>
+        <div class="eyebrow">Self · Journal</div>
+        <h1 data-user-alias>夜航员 07</h1>
+        <div class="joined">加入于 <span data-user-joined>2026 年 9 月</span> · 数据保存在这台设备</div>
+        <div class="profile-badges" data-badges></div>
+      </div>
+      <div class="profile-stats">
+        <div class="profile-stat"><div class="n" data-user-level>3</div><div class="l">月相等级</div></div>
+        <div class="profile-stat"><div class="n" data-user-streak>6</div><div class="l">连续记录</div></div>
+        <div class="profile-stat"><div class="n" data-user-credits>128</div><div class="l">月华</div></div>
+      </div>
+    </div>
+
+    <div class="profile-tabs">
+      <div class="tabs" data-profile-tabs>
+        <button class="tab is-active" type="button" data-ptab="overview">概览</button>
+        <button class="tab" type="button" data-ptab="readings">牌记</button>
+        <button class="tab" type="button" data-ptab="items">器物</button>
+        <button class="tab" type="button" data-ptab="settings">设置与 AI</button>
+      </div>
+    </div>
+
+    <div class="profile-panel" data-ppanel="overview">
+      <div class="grid g2">
+        <div class="side-card">
+          <div class="section-head" style="margin-bottom:10px"><div><div class="eyebrow">Progress</div><h3 style="font-size:22px">这一轮月相</h3></div><span class="badge badge-gold" data-level-badge>Lv.3</span></div>
+          <div class="xp-bar"><i data-xp-bar style="width:45%"></i></div>
+          <div class="cluster" style="justify-content:space-between;margin-top:8px"><span class="tiny muted">距离下一级</span><span class="tiny mono" data-xp-next>120 XP</span></div>
+          <p class="tiny muted" style="margin-top:14px">记录一条牌记得 20 XP 与 12 月华；回看、评价、大众占卜也会留下一点月光。</p>
+        </div>
+        <div class="side-card">
+          <div class="eyebrow">Recent Orders</div>
+          <div style="margin-top:12px" data-recent-orders></div>
+          <a class="link-arrow" href="orders.html" style="margin-top:12px">全部订单 <svg aria-hidden="true"><use href="#i-arrow-r"/></svg></a>
+        </div>
+      </div>
+      <div class="side-card" style="margin-top:14px">
+        <div class="cluster" style="justify-content:space-between"><div class="eyebrow">Recent Readings</div><a class="link-arrow" href="journal.html">全部牌记 <svg aria-hidden="true"><use href="#i-arrow-r"/></svg></a></div>
+        <div class="journal-list" style="margin-top:14px" data-recent-readings></div>
+      </div>
+    </div>
+
+    <div class="profile-panel" data-ppanel="readings" hidden>
+      <div class="cluster" style="justify-content:space-between;margin-bottom:12px"><span class="tiny muted" data-reading-count></span><a class="btn btn-sm btn-ghost" href="draw.html">再抽一次</a></div>
+      <div class="journal-list" data-reading-list></div>
+    </div>
+
+    <div class="profile-panel" data-ppanel="items" hidden>
+      <div class="cluster" style="justify-content:space-between;margin-bottom:14px"><span class="tiny muted">虚拟器物可用于圣所；实物器物请看订单。</span><a class="btn btn-sm btn-ghost" href="market.html">去市集</a></div>
+      <div class="inventory-grid" data-inventory></div>
+      <div class="empty-state" data-inventory-empty hidden style="margin-top:14px"><h3>还没有虚拟器物</h3><p>去市集挑一块桌布，或兑换一件小器物。</p></div>
+    </div>
+
+    <div class="profile-panel" data-ppanel="settings" hidden>
+      <div class="settings-grid">
+        <div class="settings-card">
+          <div class="eyebrow">AI · BYOK</div>
+          <h3>接入你自己的 AI</h3>
+          <p class="tiny muted" style="margin-bottom:14px">默认使用本地注疏。填入 OpenAI 兼容接口后，解读页会优先调用它；失败时自动回退。</p>
+          <div class="field"><label for="p-provider">服务商</label><select class="select" id="p-provider" data-ai-provider></select></div>
+          <div class="form-grid" style="margin-top:10px">
+            <div class="field"><label for="p-base">Base URL</label><input class="input" id="p-base" data-ai-base></div>
+            <div class="field"><label for="p-model">模型</label><input class="input" id="p-model" data-ai-model></div>
+            <div class="field full"><label for="p-key">API Key</label><input class="input" id="p-key" data-ai-key type="password" autocomplete="off" placeholder="留空则保持不变"></div>
+          </div>
+          <label class="checkbox" style="margin-top:10px"><input type="checkbox" data-ai-remember> 记住到本机（localStorage）</label>
+          <label class="checkbox" style="margin-top:8px"><input type="checkbox" data-ai-consent> 同意发送问题与牌面到第三方模型</label>
+          <div class="cluster" style="margin-top:12px"><button class="btn btn-sm btn-primary" type="button" data-ai-save>保存</button><button class="btn btn-sm btn-ghost" type="button" data-ai-test>测试连接</button><button class="btn btn-sm btn-quiet" type="button" data-ai-clear>清除 Key</button></div>
+          <div class="tiny muted" style="margin-top:8px" data-ai-status>未接入</div>
+        </div>
+
+        <div class="settings-card">
+          <div class="eyebrow">Preferences</div>
+          <h3>阅读与隐私</h3>
+          <div class="settings-row"><div><div class="nm">减少动效</div><div class="ds">关闭烛火、翻牌与页面过渡</div></div><label class="switch"><input type="checkbox" data-motion><span></span></label></div>
+          <div class="settings-row"><div><div class="nm">进入牌记时模糊</div><div class="ds">问题与笔记默认模糊，点击单条才显示</div></div><label class="switch"><input type="checkbox" data-privacy><span></span></label></div>
+          <div class="settings-row"><div><div class="nm">环境音</div><div class="ds">默认关闭；只在圣所手动开启</div></div><span class="tiny muted">圣所</span></div>
+          <div style="margin-top:16px" class="stack-sm">
+            <button class="btn btn-sm btn-ghost" type="button" data-export>导出我的数据（JSON）</button>
+            <label class="btn btn-sm btn-ghost" style="text-align:center;cursor:pointer">导入数据<input type="file" accept="application/json" data-import hidden></label>
+            <button class="btn btn-sm btn-quiet" type="button" data-reset>清空并重新载入示例</button>
+          </div>
+          <div class="tiny muted" style="margin-top:10px">导出包含牌记、订单、批注与器物；不包含 API Key。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <svg class="brand-mark" aria-hidden="true"><use href="#i-moon"/></svg>
+          <span class="brand-text"><span class="brand-cn">月相札记</span><span class="brand-en">lunar Journal</span></span>
+        </a>
+        <p>为想自己学会塔罗的人准备的记录本。没有牌的人，也能在这里完成一次有仪式感的抽牌。</p>
+      </div>
+      <div class="footer-col">
+        <h4>仪式</h4>
+        <a href="ritual.html">圣所</a>
+        <a href="draw.html">抽牌</a>
+        <a href="reading.html">解读</a>
+        <a href="journal.html">牌记</a>
+      </div>
+      <div class="footer-col">
+        <h4>共修</h4>
+        <a href="circle.html">秘密圈</a>
+        <a href="masters.html">解牌师</a>
+        <a href="oracle.html">大众占卜</a>
+        <a href="masters.html#apply">申请成为解牌师</a>
+      </div>
+      <div class="footer-col">
+        <h4>市集与帮助</h4>
+        <a href="market.html">器物市集</a>
+        <a href="orders.html">我的订单</a>
+        <a href="guide.html">新手入门</a>
+        <a href="about.html">关于与规则</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 月相札记 · lunar Journal · 网页设计课程作业</span>
+      <span class="demo-note">演示站：支付、订单、社区内容均为模拟，不产生真实交易。</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast-stack" data-toast-stack aria-live="polite" aria-atomic="false"></div>
+
+<script src="assets/js/data/cards.js"></script>
+<script src="assets/js/data/spreads.js"></script>
+<script src="assets/js/data/products.js"></script>
+<script src="assets/js/data/masters.js"></script>
+<script src="assets/js/data/posts.js"></script>
+<script src="assets/js/data/oracle.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/ai.js"></script>
+<script src="assets/js/ui.js"></script>
+<script src="assets/js/pages/profile.js"></script>
+</body>
+</html>

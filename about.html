@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a080e">
+<title>关于 · 月相札记 lunar Journal</title>
+<meta name="description" content="理念、商业模型、规则与技术说明。">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body data-page="about" class="page-about">
+<a class="skip-link" href="#main">跳到主要内容</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.2 14.1A8.4 8.4 0 0 1 9.9 3.8 8.5 8.5 0 1 0 20.2 14.1Z" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linejoin="round"/></symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h2l2.1 10.2a1.6 1.6 0 0 0 1.6 1.3h8.1a1.6 1.6 0 0 0 1.6-1.2L20 7H6" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9.5" cy="19" r="1.2" fill="currentColor"/><circle cx="17" cy="19" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4" fill="none" stroke="currentColor" stroke-width="1.35"/><path d="M5 20c.6-3.4 3.4-5.2 7-5.2s6.4 1.8 7 5.2" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/></symbol>
+    <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M4 12h15M14 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-arrow-l" viewBox="0 0 24 24"><path d="M20 12H5M10 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6" fill="none" stroke="currentColor" stroke-width="1.35"/><path d="m15 15 5 5" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.2 5.4 5.8.5-4.4 3.8 1.3 5.7L12 15.4 7.1 18.4l1.3-5.7L4 8.9l5.8-.5L12 3Z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="1" fill="none" stroke="currentColor" stroke-width="1.35"/><path d="M8 10V7a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="1.35"/><circle cx="12" cy="15" r="1" fill="currentColor"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4.5 4.5L19 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 2.5c.5 5 4 8.5 9 9-5 .5-8.5 4-9 9-.5-5-4-8.5-9-9 5-.5 8.5-4 9-9Z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5c3-1.2 5.5-.8 8 1.1v13c-2.5-1.9-5-2.3-8-1.1v-13ZM20 5.5c-3-1.2-5.5-.8-8 1.1v13c2.5-1.9 5-2.3 8-1.1v-13Z" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/></symbol>
+    <symbol id="i-cards" viewBox="0 0 24 24"><rect x="4" y="6" width="11" height="15" fill="none" stroke="currentColor" stroke-width="1.25" transform="rotate(-8 9.5 13.5)"/><rect x="9" y="4" width="11" height="15" fill="none" stroke="currentColor" stroke-width="1.25"/></symbol>
+    <symbol id="i-shop" viewBox="0 0 24 24"><path d="M4 9h16l-1-5H5L4 9Z" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/><path d="M5 9v11h14V9M9 20v-6h6v6" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4V5Z" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/><path d="M8 9h8M8 12h5" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/></symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.25"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M18.4 5.6 17 7M7 17l-1.4 1.4" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13M10 11v5M14 11v5" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16v4Z" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/><path d="m13.5 6.5 4 4" fill="none" stroke="currentColor" stroke-width="1.25"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7 11l5 5 5-5M4 20h16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 16V4M7 8l5-5 5 5M4 20h16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-shuffle" viewBox="0 0 24 24"><path d="M3 7h4l10 10h4M17 13l4 4-4 4M3 17h4l3-3M14 7h7M17 3l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-rotate" viewBox="0 0 24 24"><path d="M20 8a8 8 0 1 0 1 6M20 3v5h-5" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-9.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 7 3.5C19 15.5 12 20 12 20Z" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 6.5 12 6.5 21.5 12 21.5 12 18 17.5 12 17.5 2.5 12 2.5 12Z" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="12" cy="12" r="2.6" fill="none" stroke="currentColor" stroke-width="1.2"/></symbol>
+    <symbol id="i-filter" viewBox="0 0 24 24"><path d="M3 5h18l-7 8v6l-4 2v-8L3 5Z" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3 22 20H2L12 3Z" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/><path d="M12 9v5M12 17h.01" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M12 11v6M12 7h.01" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></symbol>
+    <symbol id="i-coin" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M12 7a5 5 0 1 0 0 10 5 5 0 1 0 0-10Z" fill="none" stroke="currentColor" stroke-width="1" opacity=".55"/><path d="M12 9v6M10 11h4M10 13h4" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M3 6h11v11H3V6ZM14 9h4l3 3v5h-7V9Z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><circle cx="7" cy="19" r="1.5" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="17.5" cy="19" r="1.5" fill="none" stroke="currentColor" stroke-width="1.2"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11Z" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="12" cy="10" r="2.4" fill="none" stroke="currentColor" stroke-width="1.2"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 20 6v6c0 4.4-3.2 7.8-8 9-4.8-1.2-8-4.6-8-9V6l8-3Z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><path d="m8.5 12 2.3 2.3 4.7-5" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="月相札记 首页">
+      <svg class="brand-mark" aria-hidden="true"><use href="#i-moon"/></svg>
+      <span class="brand-text">
+        <span class="brand-cn">月相札记</span>
+        <span class="brand-en">lunar Journal</span>
+      </span>
+    </a>
+
+    <div class="header-actions">
+      <span class="chip-credits" title="月华：记录与回看获得的积分"><svg><use href="#i-coin"/></svg><span data-credits>128</span></span>
+      <a class="icon-btn" href="cart.html" aria-label="购物袋">
+        <svg><use href="#i-cart"/></svg>
+        <span class="cart-count" data-cart-count data-empty="true">0</span>
+      </a>
+      <a class="avatar-btn" href="profile.html" aria-label="我的主页" data-avatar>月</a>
+    </div>
+  </div>
+  <div class="nav-bar">
+    <div class="wrap nav-bar-inner">
+    <nav class="main-nav" aria-label="主导航">
+      <a class="nav-link " href="index.html">首页</a>
+      <a class="nav-link " href="ritual.html">圣所</a>
+      <a class="nav-link " href="draw.html">抽牌</a>
+      <a class="nav-link " href="journal.html">牌记</a>
+      <a class="nav-link " href="cards.html">牌库</a>
+      <a class="nav-link " href="circle.html">共修</a>
+      <a class="nav-link " href="market.html">市集</a>
+      <a class="nav-link " href="profile.html">我的</a>
+      <a class="nav-link is-active" href="about.html">关于</a>
+    </nav>
+    </div>
+  </div>
+</header>
+
+
+
+<main id="main" class="page-main page-about">
+<section class="about-hero">
+  <div class="wrap">
+    <div class="eyebrow">About · lunar Journal</div>
+    <h1>不是替你占卜，<br><span class="gold">而是陪你记住。</span></h1>
+    <p class="lead" style="max-width:640px;margin-top:18px">月相札记是一本会回应的塔罗牌记：布置、抽牌、解读，然后把其中一句，写成你自己的话。它也是一个课程演示站：支付、订单与社区内容均为模拟。</p>
+    <div class="hero-cta" style="margin-top:26px">
+      <a class="btn btn-primary" href="draw.html">开始一次抽牌 <svg aria-hidden="true"><use href="#i-arrow-r"/></svg></a>
+      <a class="btn btn-ghost" href="guide.html">先看新手入门</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="home-split">
+      <div>
+        <div class="eyebrow">The Problem</div>
+        <h2 class="home-quote" style="margin-top:12px">市面上的塔罗产品，<br>大多在替你回答。</h2>
+      </div>
+      <div class="prose">
+        <p>选牌阵、点开始、看结果、付费解锁更详细的解释。这套流程很高效，但也把塔罗变成了一次性消费。你真正想做的，是让人留下来——把每一次抽牌变成可以翻阅、可以修订、可以对照的私人记录。</p>
+        <p>月相是周期，也是回看的时间刻度；札记是私人的、不完整的、允许反复批注的记录；Codex 是手抄本，暗示它会被翻阅，而不是被消费。</p>
+        <blockquote>不是替你占卜，而是陪你记住。</blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-line">
+  <div class="wrap">
+    <div class="section-head">
+      <div><div class="eyebrow">For Three People</div><h2>三个具体的人</h2></div>
+      <p>不写“18–35 岁玄学爱好者”这种谁都覆盖、谁都不像的描述。</p>
+    </div>
+    <div class="business-grid">
+      <div class="business-card"><div class="n">01 / 林</div><h3>自学三个月</h3><p>想建立自己的理解，但网上释义互相矛盾，记了就忘。她需要牌库、牌阵、可对比的注疏，以及连续的牌记。</p></div>
+      <div class="business-card"><div class="n">02 / 苏</div><h3>五年爱好者</h3><p>只想安静记录、偶尔共修；厌倦商业平台把解牌变成流量。她需要快速记录、私密模式、匿名分享单条记录。</p></div>
+      <div class="business-card"><div class="n">03 / 岚</div><h3>旅行者</h3><p>不带牌也想抽；没有实体牌，就很难进入状态。她需要可布置的圣所、线上抽牌、临时牌记。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-line">
+  <div class="wrap">
+    <div class="home-split">
+      <div>
+        <div class="eyebrow">Business Model</div>
+        <h2 class="home-quote" style="margin-top:12px">商业性，<br>不等于真收款。</h2>
+        <p class="home-note">课程要求网站具备商业性。这个作品用完整的交易流程来证明它：服务预约、实物下单、虚拟器物兑换、订单状态与评价。支付是演示的，但商业逻辑是完整的。</p>
+      </div>
+      <div>
+        <table class="data-table metric-table">
+          <thead><tr><th>收入来源</th><th>怎么收费</th><th>本作怎么演示</th></tr></thead>
+          <tbody>
+            <tr><td>解牌服务</td><td>按套餐收费，平台抽成 15%</td><td>预约 → 演示支付 → 订单 → 交付 → 评价</td></tr>
+            <tr><td>实物器物</td><td>商品差价 + 运费</td><td>详情 → 购物袋 → 地址 → 演示支付 → 物流</td></tr>
+            <tr><td>虚拟器物</td><td>¥ 购买或月华兑换</td><td>购买 → 我的器物 → 在圣所中使用</td></tr>
+          </tbody>
+        </table>
+        <div class="demo-banner" style="margin-top:16px"><svg aria-hidden="true"><use href="#i-shield"/></svg><span>本作不接入真实支付。所有“支付”“发货”“接单”都是本地状态，不会产生真实资金流。</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-line">
+  <div class="wrap">
+    <div class="prose" style="max-width:900px">
+      <div class="eyebrow">Rules & Boundaries</div>
+      <h2>规则与边界</h2>
+      <h3>解牌师是社区用户，不是平台客服</h3>
+      <p>每位解牌师有自己的风格、价格、档期与评价。平台收取 15% 服务费，用于支付通道、订单与争议处理。解牌师不提供医疗、法律或投资建议；遇到越界，可以在订单里申请退款。</p>
+      <h3>隐私</h3>
+      <p>牌记默认只存在这台设备。分享是单条、可撤回的选择；AI 只会收到问题、牌阵与牌面，不会收到你的私人笔记。导出的 JSON 不包含 API Key。</p>
+      <h3>AI</h3>
+      <p>AI 是可选能力，采用 BYOK：你自己提供 OpenAI 兼容接口的 Key。Key 默认只存在 sessionStorage；勾选“记住”才写入 localStorage。纯前端 Key 对任何能打开网页的人都可见，课程本机演示没问题；公网部署请加一层转发，并使用限额 Key。</p>
+      <h3>内容与版权</h3>
+      <p>78 张牌面采用 Pamela Colman Smith 于 1909 年绘制的 Rider-Waite-Smith 图像，在美国属公有领域；本作品将其压缩为本地 360px JPEG，来源 Wikimedia Commons 与 the-arcana 仓库。牌义参考韦特体系的公共领域意象，由本作品重写；不引用在版书籍原文。字体使用系统宋体与无衬线，不下载外部字体。</p>
+      <h3>无障碍</h3>
+      <p>支持键盘操作、焦点环、减少动效与 200% 缩放；正逆位不只靠颜色区分，图表有文字摘要。目标是对比度 ≥ 4.5:1，触控目标 ≥ 44px。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-line">
+  <div class="wrap">
+    <div class="home-split">
+      <div>
+        <div class="eyebrow">Technical Notes</div>
+        <h2 class="home-quote" style="margin-top:12px">22 个静态页面，<br>0 个自建后端。</h2>
+      </div>
+      <div class="prose">
+        <p>网站由 22 个 HTML 页面、一套 CSS token 与原生 JavaScript 构成，构建脚本只负责注入共享页头页脚。没有 npm、没有 CDN、没有外部字体；双击 <code>index.html</code> 也能打开。</p>
+        <p>数据存在 localStorage 的单一 store 里，带版本号、导出/导入与重置。AI 采用 OpenAI 兼容的 <code>/chat/completions</code>，失败时自动回退到本地注疏。</p>
+        <p>这是一个课程作业，不是商业产品。它展示的是：如何在“没有后端”的约束下，把一条完整体验与一套商业模式讲清楚。</p>
+      </div>
+    </div>
+    <div class="credits-note">
+      月相札记 · lunar Journal / v1.1 / 2026.11<br>
+      设计、前端、牌背与器物/徽记：课程作业原创。牌面：1909 年 Rider-Waite-Smith，公有领域，来源 Wikimedia Commons。牌义重写。演示数据中的解牌师、帖子、订单均为虚构。
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <svg class="brand-mark" aria-hidden="true"><use href="#i-moon"/></svg>
+          <span class="brand-text"><span class="brand-cn">月相札记</span><span class="brand-en">lunar Journal</span></span>
+        </a>
+        <p>为想自己学会塔罗的人准备的记录本。没有牌的人，也能在这里完成一次有仪式感的抽牌。</p>
+      </div>
+      <div class="footer-col">
+        <h4>仪式</h4>
+        <a href="ritual.html">圣所</a>
+        <a href="draw.html">抽牌</a>
+        <a href="reading.html">解读</a>
+        <a href="journal.html">牌记</a>
+      </div>
+      <div class="footer-col">
+        <h4>共修</h4>
+        <a href="circle.html">秘密圈</a>
+        <a href="masters.html">解牌师</a>
+        <a href="oracle.html">大众占卜</a>
+        <a href="masters.html#apply">申请成为解牌师</a>
+      </div>
+      <div class="footer-col">
+        <h4>市集与帮助</h4>
+        <a href="market.html">器物市集</a>
+        <a href="orders.html">我的订单</a>
+        <a href="guide.html">新手入门</a>
+        <a href="about.html">关于与规则</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 月相札记 · lunar Journal · 网页设计课程作业</span>
+      <span class="demo-note">演示站：支付、订单、社区内容均为模拟，不产生真实交易。</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast-stack" data-toast-stack aria-live="polite" aria-atomic="false"></div>
+
+<script src="assets/js/data/cards.js"></script>
+<script src="assets/js/data/spreads.js"></script>
+<script src="assets/js/data/products.js"></script>
+<script src="assets/js/data/masters.js"></script>
+<script src="assets/js/data/posts.js"></script>
+<script src="assets/js/data/oracle.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/ai.js"></script>
+<script src="assets/js/ui.js"></script>
+<script src="assets/js/pages/about.js"></script>
+</body>
+</html>
