@@ -1,0 +1,89 @@
+/* ============================================================
+   lunar Journal · tokens
+   ============================================================ */
+:root {
+  /* ink */
+  --ink: #0a080e;
+  --ink-2: #120d19;
+  --ink-3: #1b1424;
+  --ink-4: #251c30;
+  --ink-5: #2f2439;
+
+  /* paper */
+  --paper: #e8ddc6;
+  --paper-2: #d9cbb2;
+  --paper-3: #b9aa90;
+  --paper-4: #8c7f6c;
+
+  /* metal */
+  --gold: #c3a05e;
+  --gold-2: #d8b77a;
+  --gold-3: #8a6a2f;
+  --gold-4: #5e4720;
+
+  /* accents */
+  --rose: #b08a84;
+  --rose-2: #8f6560;
+  --sage: #7c8a75;
+  --sage-2: #5e6b59;
+  --muted: #8c8494;
+  --muted-2: #625a6b;
+
+  /* semantic */
+  --danger: #c07368;
+  --success: #8fa383;
+  --warning: #d0a35c;
+
+  /* lines & surfaces */
+  --line: rgba(195, 160, 94, 0.18);
+  --line-2: rgba(195, 160, 94, 0.34);
+  --line-3: rgba(195, 160, 94, 0.55);
+  --glow: rgba(195, 160, 94, 0.10);
+  --bg-soft: rgba(232, 221, 198, 0.035);
+  --bg-card: linear-gradient(155deg, rgba(232, 221, 198, 0.055), rgba(232, 221, 198, 0.018));
+  --bg-card-2: linear-gradient(160deg, rgba(232, 221, 198, 0.08), rgba(232, 221, 198, 0.02));
+  --bg-paper: #e8ddc6;
+  --shadow: 0 24px 60px rgba(0, 0, 0, 0.42);
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.28);
+
+  /* type */
+  --serif: "Songti SC", "Noto Serif SC", "STSong", "SimSun", "Times New Roman", serif;
+  --sans: "Hiragino Sans GB", "PingFang SC", "Noto Sans SC", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  --mono: "SF Mono", "Menlo", "Consolas", "Liberation Mono", monospace;
+
+  --fs-display: clamp(48px, 7.4vw, 104px);
+  --fs-h1: clamp(34px, 4.2vw, 54px);
+  --fs-h2: clamp(25px, 3.1vw, 38px);
+  --fs-h3: clamp(19px, 2vw, 24px);
+  --fs-body: 17px;
+  --fs-sm: 15px;
+  --fs-xs: 13px;
+  --fs-label: 12px;
+
+  /* layout */
+  --wrap: 1240px;
+  --gutter: clamp(20px, 5vw, 72px);
+  --section: clamp(64px, 9vw, 120px);
+  --radius: 2px;
+  --header-h: 120px;
+
+  /* motion */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in: cubic-bezier(0.55, 0, 1, 0.45);
+  --t-fast: 160ms;
+  --t-base: 280ms;
+  --t-slow: 600ms;
+
+  /* z */
+  --z-header: 80;
+  --z-drawer: 100;
+  --z-modal: 120;
+  --z-toast: 140;
+}
+
+@media (max-width: 640px) {
+  :root {
+    --header-h: 100px;
+    --fs-body: 16px;
+  }
+}
